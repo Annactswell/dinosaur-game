@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0.2rem;
+  background-color: #eee;
+}
+
+#game {
+  position: relative;
+  width: 9.6rem;
+  height: 5rem;
+  border: 1px solid black;
+}
+
+.dinosaur {
+  position: absolute;
+  bottom: 0;
+  width: 0.5rem;
+  height: 1rem;
+  background-color: skyblue;
+}
+
+.block {
+  position: absolute;
+  bottom: 0;
+  left: 9rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: pink;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: 9rem;
+  }
+  100% {
+    left: -0.5rem;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  30% {
+    bottom: 2rem;
+  }
+  70% {
+    bottom: 2rem;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.dino-jump {
+  animation: jump 0.5s infinite;
+}
